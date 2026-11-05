@@ -1,0 +1,549 @@
+2026-11-05 10:21:44,625 - root - INFO - ==================================================
+2026-11-05 10:21:44,625 - root - INFO - Application Configuration
+2026-11-05 10:21:44,626 - root - INFO - ==================================================
+2026-11-05 10:21:44,626 - root - INFO - Environment: development
+2026-11-05 10:21:44,626 - root - INFO - Debug Mode: True
+2026-11-05 10:21:44,626 - root - INFO - Log Level: INFO
+2026-11-05 10:21:44,626 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 10:21:44,626 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 10:21:44,626 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 10:21:44,626 - root - INFO - ==================================================
+2026-11-05 10:21:46,803 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 10:21:47,011 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 10:21:47,080 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 10:21:47,080 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 10:21:59,092 - database.utils - INFO - Application created: APP-1F3D858D882D
+2026-11-05 10:21:59,102 - database.utils - INFO - Application APP-1F3D858D882D status updated to PROCESSING
+2026-11-05 10:21:59,102 - services.microservice_api - INFO - Processing application APP-1F3D858D882D
+2026-11-05 10:21:59,102 - orchestration.langgraph_engine - INFO - Starting application processing: APP-1F3D858D882D
+2026-11-05 10:21:59,102 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 10:21:59,103 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-1F3D858D882D
+2026-11-05 10:21:59,136 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-11-05 10:21:59,191 - orchestration.langgraph_engine - ERROR - Error processing application: Error code: 401 - {'error': {'message': "Authentication Error, LiteLLM Virtual Key expected. Received=your****here, expected to start with 'sk-'.", 'type': 'auth_error', 'param': 'None', 'code': '401'}}
+2026-11-05 10:21:59,191 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 10:24:04,881 - root - INFO - ==================================================
+2026-11-05 10:24:04,881 - root - INFO - Application Configuration
+2026-11-05 10:24:04,881 - root - INFO - ==================================================
+2026-11-05 10:24:04,881 - root - INFO - Environment: development
+2026-11-05 10:24:04,881 - root - INFO - Debug Mode: True
+2026-11-05 10:24:04,881 - root - INFO - Log Level: INFO
+2026-11-05 10:24:04,881 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 10:24:04,881 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 10:24:04,882 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 10:24:04,882 - root - INFO - ==================================================
+2026-11-05 10:24:06,661 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 10:24:06,859 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 10:24:06,916 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 10:24:06,916 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 10:24:15,880 - database.utils - INFO - Application created: APP-496CB61ADBAF
+2026-11-05 10:24:15,887 - database.utils - INFO - Application APP-496CB61ADBAF status updated to PROCESSING
+2026-11-05 10:24:15,887 - services.microservice_api - INFO - Processing application APP-496CB61ADBAF
+2026-11-05 10:24:15,888 - orchestration.langgraph_engine - INFO - Starting application processing: APP-496CB61ADBAF
+2026-11-05 10:24:15,888 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 10:24:15,888 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-496CB61ADBAF
+2026-11-05 10:24:15,916 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-11-05 10:24:15,963 - orchestration.langgraph_engine - ERROR - Error processing application: Error code: 401 - {'error': {'message': "key not allowed to access model. This key can only access models=['global.anthropic.claude-haiku-4-5-20251001-v1:0', 'global.anthropic.claude-opus-4-5-20251101-v1:0', 'global.anthropic.claude-sonnet-4-6']. Tried to access claude-sonnet-4-6", 'type': 'key_model_access_denied', 'param': 'model', 'code': '401'}}
+2026-11-05 10:24:15,963 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:05:12,422 - database.utils - INFO - Application created: APP-023F419AAB00
+2026-11-05 11:05:12,429 - database.utils - INFO - Application APP-023F419AAB00 status updated to PROCESSING
+2026-11-05 11:05:12,430 - services.microservice_api - INFO - Processing application APP-023F419AAB00
+2026-11-05 11:05:12,430 - orchestration.langgraph_engine - INFO - Starting application processing: APP-023F419AAB00
+2026-11-05 11:05:12,430 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:05:12,430 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-023F419AAB00
+2026-11-05 11:05:12,470 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-11-05 11:05:12,472 - orchestration.langgraph_engine - ERROR - Error processing application: Error code: 401 - {'error': {'message': "key not allowed to access model. This key can only access models=['global.anthropic.claude-haiku-4-5-20251001-v1:0', 'global.anthropic.claude-opus-4-5-20251101-v1:0', 'global.anthropic.claude-sonnet-4-6']. Tried to access claude-sonnet-4-6", 'type': 'key_model_access_denied', 'param': 'model', 'code': '401'}}
+2026-11-05 11:05:12,472 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:08:04,346 - database.utils - INFO - Application created: APP-ABB973EC7CE1
+2026-11-05 11:08:04,354 - database.utils - INFO - Application APP-ABB973EC7CE1 status updated to PROCESSING
+2026-11-05 11:08:04,355 - services.microservice_api - INFO - Processing application APP-ABB973EC7CE1
+2026-11-05 11:08:04,355 - orchestration.langgraph_engine - INFO - Starting application processing: APP-ABB973EC7CE1
+2026-11-05 11:08:04,355 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:08:04,355 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-ABB973EC7CE1
+2026-11-05 11:08:04,397 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-11-05 11:08:04,398 - orchestration.langgraph_engine - ERROR - Error processing application: Error code: 401 - {'error': {'message': "key not allowed to access model. This key can only access models=['global.anthropic.claude-haiku-4-5-20251001-v1:0', 'global.anthropic.claude-opus-4-5-20251101-v1:0', 'global.anthropic.claude-sonnet-4-6']. Tried to access claude-sonnet-4-6", 'type': 'key_model_access_denied', 'param': 'model', 'code': '401'}}
+2026-11-05 11:08:04,398 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:10:38,736 - root - INFO - ==================================================
+2026-11-05 11:10:38,736 - root - INFO - Application Configuration
+2026-11-05 11:10:38,736 - root - INFO - ==================================================
+2026-11-05 11:10:38,737 - root - INFO - Environment: development
+2026-11-05 11:10:38,737 - root - INFO - Debug Mode: True
+2026-11-05 11:10:38,737 - root - INFO - Log Level: INFO
+2026-11-05 11:10:38,737 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:10:38,737 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:10:38,737 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:10:38,737 - root - INFO - ==================================================
+2026-11-05 11:10:40,812 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:10:41,038 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:10:41,119 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:10:41,119 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:12:16,318 - database.utils - INFO - Application created: APP-78BA618CA583
+2026-11-05 11:12:16,328 - database.utils - INFO - Application APP-78BA618CA583 status updated to PROCESSING
+2026-11-05 11:12:16,328 - services.microservice_api - INFO - Processing application APP-78BA618CA583
+2026-11-05 11:12:16,328 - orchestration.langgraph_engine - INFO - Starting application processing: APP-78BA618CA583
+2026-11-05 11:12:16,328 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:12:16,329 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-78BA618CA583
+2026-11-05 11:12:17,469 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:12:17,519 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:12:17,528 - orchestration.langgraph_engine - ERROR - Error processing application: No module named 'fastmcp'
+2026-11-05 11:12:17,529 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:14:06,305 - root - INFO - ==================================================
+2026-11-05 11:14:06,305 - root - INFO - Application Configuration
+2026-11-05 11:14:06,306 - root - INFO - ==================================================
+2026-11-05 11:14:06,306 - root - INFO - Environment: development
+2026-11-05 11:14:06,306 - root - INFO - Debug Mode: True
+2026-11-05 11:14:06,306 - root - INFO - Log Level: INFO
+2026-11-05 11:14:06,306 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:14:06,306 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:14:06,306 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:14:06,306 - root - INFO - ==================================================
+2026-11-05 11:14:08,203 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:14:08,408 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:14:08,470 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:14:08,470 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:14:59,964 - database.utils - INFO - Application created: APP-5F10196B3C6D
+2026-11-05 11:14:59,973 - database.utils - INFO - Application APP-5F10196B3C6D status updated to PROCESSING
+2026-11-05 11:14:59,974 - services.microservice_api - INFO - Processing application APP-5F10196B3C6D
+2026-11-05 11:14:59,974 - orchestration.langgraph_engine - INFO - Starting application processing: APP-5F10196B3C6D
+2026-11-05 11:14:59,974 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:14:59,974 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-5F10196B3C6D
+2026-11-05 11:15:01,214 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:15:01,251 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:15:01,805 - orchestration.langgraph_engine - ERROR - Error processing application: cannot import name 'Server' from 'fastmcp' (/home/ubuntu/Desktop/demo/Loan_Application/venv/lib/python3.12/site-packages/fastmcp/__init__.py)
+2026-11-05 11:15:01,806 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:19:13,036 - root - INFO - ==================================================
+2026-11-05 11:19:13,036 - root - INFO - Application Configuration
+2026-11-05 11:19:13,036 - root - INFO - ==================================================
+2026-11-05 11:19:13,036 - root - INFO - Environment: development
+2026-11-05 11:19:13,037 - root - INFO - Debug Mode: True
+2026-11-05 11:19:13,037 - root - INFO - Log Level: INFO
+2026-11-05 11:19:13,037 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:19:13,037 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:19:13,037 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:19:13,037 - root - INFO - ==================================================
+2026-11-05 11:19:14,924 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:19:15,141 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:19:15,204 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:19:15,204 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:19:22,637 - root - INFO - ==================================================
+2026-11-05 11:19:22,637 - root - INFO - Application Configuration
+2026-11-05 11:19:22,637 - root - INFO - ==================================================
+2026-11-05 11:19:22,638 - root - INFO - Environment: development
+2026-11-05 11:19:22,638 - root - INFO - Debug Mode: True
+2026-11-05 11:19:22,638 - root - INFO - Log Level: INFO
+2026-11-05 11:19:22,638 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:19:22,638 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:19:22,638 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:19:22,638 - root - INFO - ==================================================
+2026-11-05 11:19:24,564 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:19:24,795 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:19:24,865 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:19:24,865 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:19:44,767 - database.utils - INFO - Application created: APP-46A8926BE0F1
+2026-11-05 11:19:44,775 - database.utils - INFO - Application APP-46A8926BE0F1 status updated to PROCESSING
+2026-11-05 11:19:44,775 - services.microservice_api - INFO - Processing application APP-46A8926BE0F1
+2026-11-05 11:19:44,775 - orchestration.langgraph_engine - INFO - Starting application processing: APP-46A8926BE0F1
+2026-11-05 11:19:44,775 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:19:44,776 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-46A8926BE0F1
+2026-11-05 11:19:45,835 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:19:45,876 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:19:45,890 - orchestration.langgraph_engine - ERROR - Error processing application: name 'Server' is not defined
+2026-11-05 11:19:45,891 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:20:25,534 - database.utils - INFO - Application created: APP-DA117B347FAB
+2026-11-05 11:20:25,542 - database.utils - INFO - Application APP-DA117B347FAB status updated to PROCESSING
+2026-11-05 11:20:25,542 - services.microservice_api - INFO - Processing application APP-DA117B347FAB
+2026-11-05 11:20:25,542 - orchestration.langgraph_engine - INFO - Starting application processing: APP-DA117B347FAB
+2026-11-05 11:20:25,542 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:20:25,542 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-DA117B347FAB
+2026-11-05 11:20:26,648 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:20:26,651 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:20:26,658 - orchestration.langgraph_engine - ERROR - Error processing application: name 'Server' is not defined
+2026-11-05 11:20:26,658 - services.microservice_api - ERROR - Error processing application: 'NoneType' object has no attribute 'get'
+2026-11-05 11:31:09,662 - root - INFO - ==================================================
+2026-11-05 11:31:09,663 - root - INFO - Application Configuration
+2026-11-05 11:31:09,663 - root - INFO - ==================================================
+2026-11-05 11:31:09,663 - root - INFO - Environment: development
+2026-11-05 11:31:09,664 - root - INFO - Debug Mode: True
+2026-11-05 11:31:09,664 - root - INFO - Log Level: INFO
+2026-11-05 11:31:09,664 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:31:09,664 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:31:09,664 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:31:09,664 - root - INFO - ==================================================
+2026-11-05 11:31:11,448 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:31:11,657 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:31:11,718 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:31:11,719 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:32:05,095 - root - INFO - ==================================================
+2026-11-05 11:32:05,096 - root - INFO - Application Configuration
+2026-11-05 11:32:05,096 - root - INFO - ==================================================
+2026-11-05 11:32:05,096 - root - INFO - Environment: development
+2026-11-05 11:32:05,096 - root - INFO - Debug Mode: True
+2026-11-05 11:32:05,096 - root - INFO - Log Level: INFO
+2026-11-05 11:32:05,096 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:32:05,096 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:32:05,096 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:32:05,097 - root - INFO - ==================================================
+2026-11-05 11:32:06,863 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:32:07,069 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:32:07,125 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:32:07,125 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:37:32,795 - database.utils - INFO - Application created: APP-E0925D97002B
+2026-11-05 11:37:32,804 - database.utils - INFO - Application APP-E0925D97002B status updated to PROCESSING
+2026-11-05 11:37:32,805 - services.microservice_api - INFO - Processing application APP-E0925D97002B
+2026-11-05 11:37:32,806 - orchestration.langgraph_engine - INFO - Starting application processing: APP-E0925D97002B
+2026-11-05 11:37:32,806 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:37:32,806 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-E0925D97002B
+2026-11-05 11:37:34,322 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:34,361 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:37:36,287 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 11:37:37,999 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:38,001 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 11:37:38,001 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 11:37:38,001 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-001
+2026-11-05 11:37:39,629 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:39,630 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 11:37:39,631 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 11:37:39,631 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 11:37:39,631 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 11:37:46,960 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:46,962 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 11:37:46,962 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 11:37:46,962 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-001
+2026-11-05 11:37:50,749 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:50,751 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 11:37:50,751 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 11:37:50,751 - agents.compliance_agent - INFO - Starting compliance processing for APP-E0925D97002B
+2026-11-05 11:37:51,865 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:51,866 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 11:37:51,866 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-0C4F095F - Decision: REVIEW
+2026-11-05 11:37:54,011 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:54,012 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:37:54,013 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - DECISION_PROCESSED
+2026-11-05 11:37:54,013 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 11:37:54,013 - mcp_servers.notification_server - INFO - Notification generated: APP-E0925D97002B - REVIEW
+2026-11-05 11:37:54,013 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 11:37:54,013 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-0C4F095F
+2026-11-05 11:37:56,753 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:37:56,754 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 11:37:56,755 - orchestration.langgraph_engine - INFO - Application APP-E0925D97002B processing completed
+2026-11-05 11:37:56,762 - database.utils - INFO - Application APP-E0925D97002B status updated to COMPLETED
+2026-11-05 11:37:56,768 - database.utils - INFO - Decision created: DEC-4B55EC2E1D23
+2026-11-05 11:39:03,723 - database.utils - INFO - Application created: APP-67FD1689969F
+2026-11-05 11:39:03,729 - database.utils - INFO - Application APP-67FD1689969F status updated to PROCESSING
+2026-11-05 11:39:03,730 - services.microservice_api - INFO - Processing application APP-67FD1689969F
+2026-11-05 11:39:03,730 - orchestration.langgraph_engine - INFO - Starting application processing: APP-67FD1689969F
+2026-11-05 11:39:03,731 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:39:03,731 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-67FD1689969F
+2026-11-05 11:39:04,854 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:04,855 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:39:04,856 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 11:39:06,722 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:06,723 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 11:39:06,723 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 11:39:06,724 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-001
+2026-11-05 11:39:09,140 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:09,142 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 11:39:09,143 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 11:39:09,143 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 11:39:09,143 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 11:39:15,769 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:15,770 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 11:39:15,770 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 11:39:15,771 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-001
+2026-11-05 11:39:19,130 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:19,131 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 11:39:19,132 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 11:39:19,132 - agents.compliance_agent - INFO - Starting compliance processing for APP-67FD1689969F
+2026-11-05 11:39:20,886 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:20,887 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 11:39:20,887 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-84AB868B - Decision: REVIEW
+2026-11-05 11:39:20,887 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:39:20,888 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - Loan Decision Processed
+2026-11-05 11:39:23,472 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:23,475 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 11:39:23,476 - mcp_servers.notification_server - INFO - Notification generated: APP-67FD1689969F - REVIEW
+2026-11-05 11:39:23,476 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 11:39:23,476 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-84AB868B
+2026-11-05 11:39:23,476 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:39:23,476 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - Compliance Review Completed
+2026-11-05 11:39:26,352 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:39:26,356 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 11:39:26,357 - orchestration.langgraph_engine - INFO - Application APP-67FD1689969F processing completed
+2026-11-05 11:39:26,365 - database.utils - INFO - Application APP-67FD1689969F status updated to COMPLETED
+2026-11-05 11:39:26,373 - database.utils - INFO - Decision created: DEC-B8C4B0D89184
+2026-11-05 11:47:42,927 - root - INFO - ==================================================
+2026-11-05 11:47:42,927 - root - INFO - Application Configuration
+2026-11-05 11:47:42,928 - root - INFO - ==================================================
+2026-11-05 11:47:42,928 - root - INFO - Environment: development
+2026-11-05 11:47:42,928 - root - INFO - Debug Mode: True
+2026-11-05 11:47:42,928 - root - INFO - Log Level: INFO
+2026-11-05 11:47:42,928 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 11:47:42,928 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 11:47:42,928 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 11:47:42,928 - root - INFO - ==================================================
+2026-11-05 11:47:44,746 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 11:47:44,942 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 11:47:45,006 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 11:47:45,006 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 11:49:21,836 - database.utils - INFO - Application created: APP-476BD8E6D274
+2026-11-05 11:49:21,843 - database.utils - INFO - Application APP-476BD8E6D274 status updated to PROCESSING
+2026-11-05 11:49:21,844 - services.microservice_api - INFO - Processing application APP-476BD8E6D274
+2026-11-05 11:49:21,844 - orchestration.langgraph_engine - INFO - Starting application processing: APP-476BD8E6D274 (applicant: APP-001)
+2026-11-05 11:49:21,844 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:49:21,844 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-001
+2026-11-05 11:49:22,870 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:22,911 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:49:24,969 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 11:49:26,663 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:26,666 - agents.applicant_profile_agent - INFO - Agent called tool: calculate_income_stability
+2026-11-05 11:49:26,666 - agents.applicant_profile_agent - INFO - Agent called tool: assess_employment_risk
+2026-11-05 11:49:26,667 - agents.applicant_profile_agent - INFO - Agent called tool: check_application_completeness
+2026-11-05 11:49:31,504 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:31,506 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 11:49:31,506 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 11:49:31,506 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-001
+2026-11-05 11:49:33,034 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:33,036 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 11:49:33,036 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 11:49:33,036 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 11:49:33,036 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 11:49:39,178 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:39,179 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 11:49:39,179 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 11:49:39,179 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-001
+2026-11-05 11:49:43,437 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:43,438 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 11:49:49,399 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:49,400 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 11:49:49,401 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 11:49:49,401 - agents.compliance_agent - INFO - Starting compliance processing for APP-476BD8E6D274
+2026-11-05 11:49:50,515 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:50,516 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 11:49:50,517 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-ED1645FB - Decision: REJECTED
+2026-11-05 11:49:53,000 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:53,002 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:49:53,002 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - LOAN_DECISION_PROCESSED
+2026-11-05 11:49:53,002 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 11:49:53,002 - mcp_servers.notification_server - INFO - Notification generated: APP-476BD8E6D274 - REJECTED
+2026-11-05 11:49:53,002 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 11:49:53,002 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-ED1645FB
+2026-11-05 11:49:55,732 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:49:55,733 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 11:49:55,734 - orchestration.langgraph_engine - INFO - Application APP-476BD8E6D274 processing completed
+2026-11-05 11:49:55,740 - database.utils - INFO - Application APP-476BD8E6D274 status updated to COMPLETED
+2026-11-05 11:49:55,748 - database.utils - INFO - Decision created: DEC-8BF8221E46B1
+2026-11-05 11:50:40,871 - database.utils - INFO - Application created: APP-CE487E1173D8
+2026-11-05 11:50:40,881 - database.utils - INFO - Application APP-CE487E1173D8 status updated to PROCESSING
+2026-11-05 11:50:40,882 - services.microservice_api - INFO - Processing application APP-CE487E1173D8
+2026-11-05 11:50:40,882 - orchestration.langgraph_engine - INFO - Starting application processing: APP-CE487E1173D8 (applicant: APP-001)
+2026-11-05 11:50:40,882 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:50:40,882 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-001
+2026-11-05 11:50:41,913 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:50:41,916 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:50:41,916 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 11:50:43,601 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:50:43,602 - agents.applicant_profile_agent - INFO - Agent called tool: calculate_income_stability
+2026-11-05 11:50:43,602 - agents.applicant_profile_agent - INFO - Agent called tool: assess_employment_risk
+2026-11-05 11:50:43,602 - agents.applicant_profile_agent - INFO - Agent called tool: check_application_completeness
+2026-11-05 11:50:48,058 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:50:48,059 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 11:50:48,059 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 11:50:48,060 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-001
+2026-11-05 11:50:49,644 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:50:49,645 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 11:50:49,645 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 11:50:49,645 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 11:50:49,646 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 11:50:56,236 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:50:56,237 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 11:50:56,237 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 11:50:56,238 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-001
+2026-11-05 11:51:00,661 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:51:00,663 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 11:51:09,332 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:51:09,333 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 11:51:09,333 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 11:51:09,334 - agents.compliance_agent - INFO - Starting compliance processing for APP-CE487E1173D8
+2026-11-05 11:51:10,396 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:51:10,401 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 11:51:10,402 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-5044AC10 - Decision: APPROVED
+2026-11-05 11:51:12,652 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:51:12,653 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:51:12,653 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - LOAN_DECISION_PROCESSED
+2026-11-05 11:51:12,653 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 11:51:12,653 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-5044AC10
+2026-11-05 11:51:12,653 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 11:51:12,653 - mcp_servers.notification_server - INFO - Notification generated: APP-CE487E1173D8 - APPROVED
+2026-11-05 11:51:15,545 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:51:15,547 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 11:51:15,547 - orchestration.langgraph_engine - INFO - Application APP-CE487E1173D8 processing completed
+2026-11-05 11:51:15,554 - database.utils - INFO - Application APP-CE487E1173D8 status updated to COMPLETED
+2026-11-05 11:51:15,564 - database.utils - INFO - Decision created: DEC-0E0474398EA6
+2026-11-05 11:55:19,374 - database.utils - INFO - Application created: APP-BB663EDA896C
+2026-11-05 11:55:19,383 - database.utils - INFO - Application APP-BB663EDA896C status updated to PROCESSING
+2026-11-05 11:55:19,383 - services.microservice_api - INFO - Processing application APP-BB663EDA896C
+2026-11-05 11:55:19,384 - orchestration.langgraph_engine - INFO - Starting application processing: APP-BB663EDA896C (applicant: INDU-002)
+2026-11-05 11:55:19,384 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 11:55:19,384 - agents.applicant_profile_agent - INFO - Starting profile analysis for INDU-002
+2026-11-05 11:55:20,834 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:20,836 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 11:55:20,837 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 11:55:22,612 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:22,613 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 11:55:22,613 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 11:55:22,614 - agents.financial_risk_agent - INFO - Starting risk analysis for INDU-002
+2026-11-05 11:55:24,259 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:24,260 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 11:55:24,261 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 11:55:24,261 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 11:55:24,261 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 11:55:31,662 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:31,664 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 11:55:31,664 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 11:55:31,664 - agents.loan_decision_agent - INFO - Starting decision synthesis for INDU-002
+2026-11-05 11:55:35,219 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:35,220 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 11:55:35,221 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 11:55:35,221 - agents.compliance_agent - INFO - Starting compliance processing for APP-BB663EDA896C
+2026-11-05 11:55:36,568 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:36,570 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 11:55:36,570 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-E5732346 - Decision: REVIEW
+2026-11-05 11:55:38,889 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:38,891 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 11:55:38,891 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - COMPLIANCE_PROCESSING
+2026-11-05 11:55:38,892 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 11:55:38,892 - mcp_servers.notification_server - INFO - Notification generated: APP-BB663EDA896C - REVIEW
+2026-11-05 11:55:38,892 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 11:55:38,892 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-E5732346
+2026-11-05 11:55:41,823 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 11:55:41,826 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 11:55:41,827 - orchestration.langgraph_engine - INFO - Application APP-BB663EDA896C processing completed
+2026-11-05 11:55:41,834 - database.utils - INFO - Application APP-BB663EDA896C status updated to COMPLETED
+2026-11-05 11:55:41,841 - database.utils - INFO - Decision created: DEC-CCE45DD3CFBD
+2026-11-05 12:02:09,235 - root - INFO - ==================================================
+2026-11-05 12:02:09,235 - root - INFO - Application Configuration
+2026-11-05 12:02:09,236 - root - INFO - ==================================================
+2026-11-05 12:02:09,236 - root - INFO - Environment: development
+2026-11-05 12:02:09,236 - root - INFO - Debug Mode: True
+2026-11-05 12:02:09,236 - root - INFO - Log Level: INFO
+2026-11-05 12:02:09,236 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 12:02:09,236 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 12:02:09,236 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 12:02:09,236 - root - INFO - ==================================================
+2026-11-05 12:02:11,072 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 12:02:11,281 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 12:02:11,344 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 12:02:11,344 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 12:05:13,972 - root - INFO - ==================================================
+2026-11-05 12:05:13,973 - root - INFO - Application Configuration
+2026-11-05 12:05:13,973 - root - INFO - ==================================================
+2026-11-05 12:05:13,973 - root - INFO - Environment: development
+2026-11-05 12:05:13,973 - root - INFO - Debug Mode: True
+2026-11-05 12:05:13,973 - root - INFO - Log Level: INFO
+2026-11-05 12:05:13,973 - root - INFO - Database Path: data/loan_approval.db
+2026-11-05 12:05:13,973 - root - INFO - API Server: 127.0.0.1:8000
+2026-11-05 12:05:13,973 - root - INFO - LLM Model: claude-sonnet-4-6
+2026-11-05 12:05:13,973 - root - INFO - ==================================================
+2026-11-05 12:05:15,782 - anthropic.lib.credentials._auth - WARNING - Anthropic: ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN are both set. Using ANTHROPIC_API_KEY.
+2026-11-05 12:05:15,982 - orchestration.langgraph_engine - INFO - Orchestrator initialized with all 4 agents
+2026-11-05 12:05:16,040 - services.microservice_api - INFO - FastAPI Microservice starting
+2026-11-05 12:05:16,040 - services.microservice_api - INFO - API running on 127.0.0.1:8000
+2026-11-05 12:11:09,318 - database.utils - INFO - Application created: APP-D7417A3AD6CD
+2026-11-05 12:11:09,325 - database.utils - INFO - Application APP-D7417A3AD6CD status updated to PROCESSING
+2026-11-05 12:11:09,325 - services.microservice_api - INFO - Processing application APP-D7417A3AD6CD
+2026-11-05 12:11:09,325 - orchestration.langgraph_engine - INFO - Starting application processing: APP-D7417A3AD6CD (applicant: APP-001)
+2026-11-05 12:11:09,326 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 12:11:09,326 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-001
+2026-11-05 12:11:11,189 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:11,233 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 12:11:13,250 - agents.applicant_profile_agent - INFO - Agent called tool: calculate_income_stability
+2026-11-05 12:11:13,250 - agents.applicant_profile_agent - INFO - Agent called tool: assess_employment_risk
+2026-11-05 12:11:13,251 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 12:11:13,251 - agents.applicant_profile_agent - INFO - Agent called tool: check_application_completeness
+2026-11-05 12:11:18,252 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:18,255 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 12:11:18,255 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 12:11:18,255 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-001
+2026-11-05 12:11:19,969 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:19,974 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 12:11:19,974 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 12:11:19,974 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 12:11:19,974 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 12:11:25,779 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:25,781 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 12:11:25,781 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 12:11:25,782 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-001
+2026-11-05 12:11:29,416 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:29,417 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 12:11:29,418 - agents.loan_decision_agent - ERROR - Error processing tool synthesize_decision: object of type 'int' has no len()
+2026-11-05 12:11:31,717 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:31,719 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 12:11:31,719 - agents.loan_decision_agent - ERROR - Error processing tool synthesize_decision: can't multiply sequence by non-int of type 'float'
+2026-11-05 12:11:41,973 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:41,974 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 12:11:41,974 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 12:11:41,975 - agents.compliance_agent - INFO - Starting compliance processing for APP-D7417A3AD6CD
+2026-11-05 12:11:43,012 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:43,014 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 12:11:43,014 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-7A8AC0C5 - Decision: REJECTED
+2026-11-05 12:11:45,497 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:45,498 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 12:11:45,498 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - LOAN_DECISION_PROCESSED
+2026-11-05 12:11:45,498 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 12:11:45,499 - mcp_servers.notification_server - INFO - Notification generated: APP-D7417A3AD6CD - REJECTED
+2026-11-05 12:11:45,499 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 12:11:45,499 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-7A8AC0C5
+2026-11-05 12:11:48,488 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:11:48,489 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 12:11:48,489 - orchestration.langgraph_engine - INFO - Application APP-D7417A3AD6CD processing completed
+2026-11-05 12:11:48,496 - database.utils - INFO - Application APP-D7417A3AD6CD status updated to COMPLETED
+2026-11-05 12:11:48,505 - database.utils - INFO - Decision created: DEC-AFA9892B8B65
+2026-11-05 12:14:12,148 - database.utils - INFO - Application created: APP-C328F03B09A0
+2026-11-05 12:14:12,157 - database.utils - INFO - Application APP-C328F03B09A0 status updated to PROCESSING
+2026-11-05 12:14:12,158 - services.microservice_api - INFO - Processing application APP-C328F03B09A0
+2026-11-05 12:14:12,159 - orchestration.langgraph_engine - INFO - Starting application processing: APP-C328F03B09A0 (applicant: APP-002)
+2026-11-05 12:14:12,159 - orchestration.langgraph_engine - INFO - Running ApplicantProfileAgent...
+2026-11-05 12:14:12,159 - agents.applicant_profile_agent - INFO - Starting profile analysis for APP-002
+2026-11-05 12:14:14,059 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:14,060 - agents.applicant_profile_agent - INFO - Agent called tool: get_applicant_profile
+2026-11-05 12:14:14,063 - agents.applicant_profile_agent - INFO - Agent called tool: get_credit_history
+2026-11-05 12:14:14,063 - agents.applicant_profile_agent - INFO - Agent called tool: check_application_completeness
+2026-11-05 12:14:15,250 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:15,253 - agents.applicant_profile_agent - INFO - Agent called tool: calculate_income_stability
+2026-11-05 12:14:15,253 - agents.applicant_profile_agent - INFO - Agent called tool: assess_employment_risk
+2026-11-05 12:14:20,783 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:20,784 - orchestration.langgraph_engine - INFO - Profile analysis completed
+2026-11-05 12:14:20,785 - orchestration.langgraph_engine - INFO - Running FinancialRiskAgent...
+2026-11-05 12:14:20,785 - agents.financial_risk_agent - INFO - Starting risk analysis for APP-002
+2026-11-05 12:14:22,356 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:22,357 - agents.financial_risk_agent - INFO - Agent called tool: calculate_metrics
+2026-11-05 12:14:22,358 - agents.financial_risk_agent - INFO - Agent called tool: assess_credit_risk
+2026-11-05 12:14:22,358 - agents.financial_risk_agent - INFO - Agent called tool: assess_loan_risk
+2026-11-05 12:14:22,358 - agents.financial_risk_agent - INFO - Agent called tool: detect_anomalies
+2026-11-05 12:14:29,683 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:29,685 - orchestration.langgraph_engine - INFO - Risk analysis completed
+2026-11-05 12:14:29,685 - orchestration.langgraph_engine - INFO - Running LoanDecisionAgent...
+2026-11-05 12:14:29,685 - agents.loan_decision_agent - INFO - Starting decision synthesis for APP-002
+2026-11-05 12:14:34,575 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:34,577 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 12:14:34,577 - agents.loan_decision_agent - ERROR - Error processing tool synthesize_decision: object of type 'int' has no len()
+2026-11-05 12:14:36,926 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:36,927 - agents.loan_decision_agent - INFO - Agent called tool: synthesize_decision
+2026-11-05 12:14:45,995 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:45,997 - orchestration.langgraph_engine - INFO - Decision synthesis completed
+2026-11-05 12:14:45,997 - orchestration.langgraph_engine - INFO - Running ComplianceAgent...
+2026-11-05 12:14:45,997 - agents.compliance_agent - INFO - Starting compliance processing for APP-C328F03B09A0
+2026-11-05 12:14:47,140 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:47,142 - agents.compliance_agent - INFO - Agent called tool: create_case_record
+2026-11-05 12:14:47,146 - mcp_servers.notification_server - INFO - Case record created: CASE-2026-B98863A0 - Decision: APPROVED
+2026-11-05 12:14:49,637 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:49,639 - agents.compliance_agent - INFO - Agent called tool: log_agent_action
+2026-11-05 12:14:49,639 - mcp_servers.notification_server - INFO - Agent action logged: Compliance Officer - LOAN_DECISION_PROCESSED
+2026-11-05 12:14:49,639 - agents.compliance_agent - INFO - Agent called tool: generate_notification
+2026-11-05 12:14:49,639 - mcp_servers.notification_server - INFO - Notification generated: APP-C328F03B09A0 - APPROVED
+2026-11-05 12:14:49,640 - agents.compliance_agent - INFO - Agent called tool: create_compliance_record
+2026-11-05 12:14:49,640 - mcp_servers.notification_server - INFO - Compliance record created: CASE-2026-B98863A0
+2026-11-05 12:14:52,541 - httpx2 - INFO - HTTP Request: POST https://llmgw-wp.tekstac.com/v1/messages "HTTP/1.1 200 OK"
+2026-11-05 12:14:52,543 - orchestration.langgraph_engine - INFO - Compliance processing completed
+2026-11-05 12:14:52,543 - orchestration.langgraph_engine - INFO - Application APP-C328F03B09A0 processing completed
+2026-11-05 12:14:52,553 - database.utils - INFO - Application APP-C328F03B09A0 status updated to COMPLETED
+2026-11-05 12:14:52,564 - database.utils - INFO - Decision created: DEC-EF18B8D94CF5
