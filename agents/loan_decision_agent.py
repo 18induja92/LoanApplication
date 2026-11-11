@@ -79,6 +79,7 @@ Be fair, consistent, and consider all factors in your decision."""
         financial_risk: Dict[str, Any]
     ) -> Dict[str, Any]:
         """Generate final loan decision"""
+        import json
 
         messages = [
             {
@@ -104,6 +105,7 @@ Please synthesize this information into a final decision."""
 
         max_iterations = 10
         iteration = 0
+        captured_decision_data = None
 
         while iteration < max_iterations:
             iteration += 1
@@ -124,6 +126,7 @@ Please synthesize this information into a final decision."""
                         return {
                             "status": "success",
                             "decision_summary": block.text,
+                            "decision_data": captured_decision_data,
                             "applicant_id": applicant_data.get("applicant_id")
                         }
                 break
@@ -139,12 +142,22 @@ Please synthesize this information into a final decision."""
                             "tool_use_id": block.id,
                             "content": result
                         })
+                        # Capture structured decision data from synthesize_decision tool
+                        if block.name == "synthesize_decision":
+                            try:
+                                captured_decision_data = json.loads(result)
+                                logger.info(f"Captured decision data: classification={captured_decision_data.get('classification')}, "
+                                          f"risk_score={captured_decision_data.get('risk_score')}, "
+                                          f"confidence={captured_decision_data.get('confidence_level')}")
+                            except (json.JSONDecodeError, TypeError) as e:
+                                logger.error(f"Failed to parse decision data: {e}")
 
                 messages.append({"role": "user", "content": tool_results})
 
         return {
             "status": "error",
             "message": "Max iterations reached",
+            "decision_data": captured_decision_data,
             "applicant_id": applicant_data.get("applicant_id")
         }
 

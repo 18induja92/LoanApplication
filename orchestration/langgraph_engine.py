@@ -119,28 +119,27 @@ class LoanApprovalOrchestrator:
             state.status = "compliance"
             logger.info("Running ComplianceAgent...")
 
-            # Extract decision details from synthesis
-            decision_summary = state.decision.get("decision_summary", "")
+            # Extract structured decision details from agent result
             decision_class = "REVIEW"  # Default
             risk_score = 0.5
-            confidence = 0.5
+            confidence = 0.7
+            decision_factors = []
 
-            # Try to parse decision from agent response
-            if "APPROVED" in decision_summary.upper():
-                decision_class = "APPROVED"
-                risk_score = 0.25
-                confidence = 0.90
-            elif "REJECTED" in decision_summary.upper():
-                decision_class = "REJECTED"
-                risk_score = 0.85
-                confidence = 0.95
+            # Extract from structured decision data if available
+            if state.decision and state.decision.get("status") == "success":
+                decision_data = state.decision.get("decision_data", {})
+                if decision_data:
+                    decision_class = decision_data.get("classification", "REVIEW")
+                    risk_score = decision_data.get("risk_score", 0.5)
+                    confidence = decision_data.get("confidence_level", 0.7)
+                    decision_factors = decision_data.get("key_decision_factors", [])
 
             compliance_result = self.compliance_agent["run"](
                 application_id,
                 decision_class,
                 risk_score,
                 confidence,
-                ["Decision processed", "Compliance documented"]
+                decision_factors if decision_factors else ["Decision processed", "Compliance documented"]
             )
 
             if compliance_result.get("status") == "success":

@@ -108,6 +108,15 @@ async def submit_application(request: LoanApplicationRequest):
         decision_data = result.get("decision", {})
         decision_summary = decision_data.get("decision_summary", "")
 
+        # Extract structured decision data from agent result
+        structured_decision = decision_data.get("decision_data", {})
+        classification = structured_decision.get("classification", "REVIEW")
+        risk_score = structured_decision.get("risk_score", 0.5)
+        confidence_level = structured_decision.get("confidence_level", 0.7)
+        key_factors = structured_decision.get("key_decision_factors", [])
+        # Use the structured explanation from the MCP tool, not the agent's narrative
+        explanation = structured_decision.get("explanation", "")
+
         # Update application status based on decision
         if result.get("status") == "completed":
             db.update_application_status(app_id, "COMPLETED")
@@ -118,11 +127,11 @@ async def submit_application(request: LoanApplicationRequest):
         if decision_data:
             db.create_decision({
                 "application_id": app_id,
-                "classification": "REVIEW",  # Default, parsed from text
-                "risk_score": 0.5,
-                "confidence_level": 0.7,
-                "reasoning": decision_summary,
-                "key_decision_factors": str(["Processed by agents"])
+                "classification": classification,
+                "risk_score": risk_score,
+                "confidence_level": confidence_level,
+                "reasoning": explanation,
+                "key_decision_factors": str(key_factors)
             })
 
         return ApplicationStatusResponse(

@@ -23,14 +23,42 @@ def synthesize_decision(
     """
     Synthesize all analysis into a final decision
     """
+    from mcp_servers.risk_rules_server import (
+        assess_credit_score_risk,
+        assess_loan_amount_risk,
+        calculate_debt_to_income_ratio,
+        detect_anomalies
+    )
 
-    # Extract key metrics
-    income_stability = applicant_profile_analysis.get("income_stability_score", 0.5)
+    # Extract key metrics - try from structured analysis first, fallback to applicant_data
+    income_stability = applicant_profile_analysis.get("income_stability_score", 0.6)
     employment_risk = applicant_profile_analysis.get("employment_risk", "MEDIUM")
-    credit_risk = financial_risk_analysis.get("credit_score_risk", "MEDIUM")
-    loan_risk = financial_risk_analysis.get("loan_amount_risk", "MEDIUM")
-    dti_ratio = financial_risk_analysis.get("debt_to_income_ratio_with_new_loan", 0.5)
-    anomalies = financial_risk_analysis.get("anomalies_detected", [])
+
+    # Calculate from applicant_data if not in analysis
+    if not employment_risk or employment_risk == "MEDIUM":
+        employment_type = applicant_data.get("employment_type", "FULL_TIME")
+        employment_risk = "LOW" if employment_type == "FULL_TIME" else "HIGH" if employment_type == "SELF_EMPLOYED" else "MEDIUM"
+
+    # Get credit risk from score
+    credit_score = applicant_data.get("credit_score", 700)
+    credit_risk_result = assess_credit_score_risk(credit_score)
+    credit_risk = credit_risk_result.get("credit_score_risk", "MEDIUM")
+
+    # Get loan risk
+    loan_amount = applicant_data.get("loan_amount", 0)
+    income = applicant_data.get("income", 0)
+    existing_liabilities = applicant_data.get("existing_liabilities", 0)
+    loan_risk_result = assess_loan_amount_risk(loan_amount, income, existing_liabilities)
+    loan_risk = loan_risk_result.get("loan_amount_risk", "MEDIUM")
+
+    # Calculate DTI
+    monthly_income = income / 12 if income > 0 else 0
+    monthly_debt = existing_liabilities / 12 if existing_liabilities > 0 else 0
+    monthly_payment = loan_amount / 12 if loan_amount > 0 else 0
+    dti_ratio = calculate_debt_to_income_ratio(monthly_income, monthly_debt + monthly_payment)
+
+    # Detect anomalies
+    anomalies = detect_anomalies(applicant_data)
 
     # Calculate risk score (0-1, higher = more risky)
     risk_score = 0.5
@@ -112,22 +140,26 @@ def determine_classification(
 ) -> tuple:
     """Determine classification and confidence level"""
 
-    # Automatic rejection criteria
-    if risk_score > 0.85 or credit_risk == "VERY_HIGH" or employment_risk == "VERY_HIGH":
+    # Automatic rejection criteria (high risk)
+    if risk_score > 0.80 or credit_risk == "VERY_HIGH" or employment_risk == "VERY_HIGH":
         return "REJECTED", 0.95
 
-    # Automatic approval criteria
-    if risk_score < 0.25 and credit_risk in ["LOW", "MEDIUM"] and len(anomalies) == 0:
+    # Automatic approval criteria (low risk)
+    if risk_score < 0.20 and credit_risk in ["LOW", "MEDIUM"] and employment_risk in ["LOW", "MEDIUM"]:
         return "APPROVED", 0.90
 
-    # Review required criteria
-    if 0.25 <= risk_score <= 0.75:
-        confidence = 0.7 - (abs(risk_score - 0.5) * 0.4)  # Lower confidence near the boundary
+    # Medium-high risk that needs review
+    if risk_score > 0.65:
+        return "REVIEW", 0.80
+
+    # Medium risk - needs review but lower confidence
+    if 0.25 <= risk_score <= 0.65:
+        confidence = 0.7 - (abs(risk_score - 0.45) * 0.2)  # Varies between 0.6-0.8
         return "REVIEW", max(0.6, confidence)
 
-    # High risk but not automatic rejection
-    if risk_score > 0.75:
-        return "REVIEW", 0.75
+    # Low risk near approval threshold
+    if risk_score < 0.25:
+        return "REVIEW", 0.70
 
     return "REVIEW", 0.65
 
